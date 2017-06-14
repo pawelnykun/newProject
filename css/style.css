@@ -353,6 +353,18 @@ header .btn:hover {
 	display: none;
 }
 
+#table-info .table-responsive table thead tr th p i {
+	font-size: 16px;
+}
+
+#table-info .table-responsive table thead tr th p i:hover {
+	color: black;
+}
+
+i.fa-sort-desc {
+	margin: 0 5px;
+}
+
 #table-info .table-responsive table thead tr th:hover p {
 	display: inline-block;
 }

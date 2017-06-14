@@ -16,16 +16,18 @@ $(function() {
 		console.log("Response is: " + resp.response);
 	}
 
-	function getData() {
+	function getData(data) {
 		$.ajax({
 			url: url + connect,
 			method: 'POST',
+			data: data,
 			success: showData
 		});
 	}
 
 	function showData(resp) {
 		var tbody = table.find('tbody').last();
+		tbody.empty();
 		resp.forEach(function(item) {
 			var $row = $('<tr>');
 			var $itemId = $('<td>').text(item.id);
@@ -41,20 +43,27 @@ $(function() {
 	}
 
 	testingConnection();
-	getData();
+
+	var data = {
+		sort_column: 'acronym',
+		sort_order: 'asc',
+		filter: ''
+	};
+
+	getData(data);
 
 	//sorting
 	function sortColumn() {
 		
 	}
 
-	var arrow = $('.sort');
-	arrow.click(function() {
-		$.ajax({
-			url: url + connect,
-			method: 'POST',
-			success: sortColumn
-		});
+	$('.firstID').find('.fa-sort-desc').click(function() {
+		data = {
+			sort_column: 'id',
+			sort_order: 'desc',
+			filter: ''
+		};
+		getData(data);
 	});
 
 	//scrollTo#
