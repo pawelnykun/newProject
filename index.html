@@ -5,15 +5,215 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Testing API</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="testing">
-				<button class="start">TESTING CONNECTION</button>
-				<p>PING</p>
+		<!-- Header Starts -->
+		<header>
+			<nav>
+				<div class="container">
+					<div class="row">
+						<div class="logo">
+							<img src="img/logo.png" alt="logo">
+						</div>
+						<ul>
+							<li><a href="#explore">TOP DESTINATIONS</a></li>
+							<li><a href="#have">ADD YOUR BOAT</a></li>
+							<li><a href="">SIGN UP</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<section class="container-fluid hero">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<div class="slogan">
+							<h1>RESERVE A BOAT NOW!</h1>
+							<h2>AND SET YOUR SAILS INTO PARADISE!</h2>
+						</div>
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control search" placeholder="WHAT IS YOUR DESTINATION, SAILOR?">
+							</div>
+							<button type="submit" class="btn btn-default"><img src="img/boat.png" alt="boat"> FIND A BOAT</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</header><!-- Header Ends -->
+		<!-- Section Numbers Starts -->
+		<section class="numbers">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<ul>
+							<li>
+								<p class="number">2300</p>
+								<p class="description">Destinations</p>
+							</li>
+							<li>
+								<p class="number">1231</p>
+								<p class="description">Cities</p>
+							</li>
+							<li>
+								<p class="number">35000</p>
+								<p class="description">Boats</p>
+							</li>
+							<li>
+								<p class="number">50000</p>
+								<p class="description">Sailors</p>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
+		</section><!-- Section Numbers Ends -->
+		<!-- Section Explore Starts -->
+		<section id="explore">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2>EXPLORE OUR TOP DESTINATIONS</h2>
+						<p>Choose your boat and the best place for relax from our offer:</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6 col-lg-8">
+						<div class="photo1">
+							<div class="overlay">
+								<button class="boat"><img src="img/boat.png" alt="boat">730</button>
+								<h3>Figueira da Foz</h3>
+								<p>Portugal</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="photo2">
+							<div class="overlay">
+								<button class="boat"><img src="img/boat.png" alt="boat">621</button>
+								<h3>Venice</h3>
+								<p>Italy</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<div class="photo3">
+							<div class="overlay">
+								<button class="boat"><img src="img/boat.png" alt="boat">543</button>
+								<h3>Santorini</h3>
+								<p>Greece</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="photo4">
+							<div class="overlay">
+								<button class="boat"><img src="img/boat.png" alt="boat">495</button>
+								<h3>Miami</h3>
+								<p>United States</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-4">
+						<div class="photo5">
+							<div class="overlay">
+								<button class="boat"><img src="img/boat.png" alt="boat">402</button>
+								<h3>Palma de Mallorca</h3>
+								<p>Spain</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<button class="more">EXPLORE MORE DESTINATIONS</button>
+					</div>
+				</div>
+			</div>
+		</section><!-- Section Explore Ends -->
+		<!-- Section Have Starts -->
+		<section id="have">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<div class="slogan">
+							<h1>RESERVE A BOAT NOW!</h1>
+							<h2>NAVIGARE NECESSE EST, VIVERE NON EST NECESSE</h2>
+							<button class="more">MAKE MONEY WITH YOUR BOAT</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- Section Have Ends -->
+		<!-- Section Table-Info Starts -->
+		<section id="table-info">
+			<div class="table-responsive">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>ACRONYM</th>
+							<th>NAME</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</section><!-- Section Table-Info Ends -->
+		<!-- Footer Starts -->
+		<footer>
+			<div class="container-fluid division"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-2">
+						<h3>TOP LOCATIONS</h3>
+						<p>Portugal - Figueira da Foz</p>
+						<p>Italy - Venice</p>
+						<p>Spain - Palma de Mallorca</p>
+						<p>United States - Miami</p>
+					</div>
+					<div class="col-sm-6 col-md-2">
+						<h3>FEATURED BOATS</h3>
+						<p>Delphia 47</p>
+						<p>Sense 55</p>
+						<p>Crusier 51</p>
+						<p>Crusier 41S</p>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+						<form>
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Your email adress">
+							</div>
+							<button type="submit" class="btn btn-default">SUBSCRIBE</button>
+						</form>
+						<div class="socials">
+							<div class="facebook">
+								<a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+							</div>
+							<div class="twitter">
+								<a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+							</div>
+							<div class="gplus">
+								<a href="" target="_blank"><i class="fa fa-google-plus-official"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-2">
+						<h3>CONTACT US</h3>
+						<p>Phone: (+48) 609 725 009</p>
+						<p>contact@reserveaboat.com</p>
+						<p>Szuwarowa 8/32</p>
+						<p>30-384 Kraków</p>
+					</div>
+				</div>
+			</div>
+		</footer><!-- Footer Ends -->
 		<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
 		<script src="js/scripts.js"></script>
 	</body>

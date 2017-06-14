@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700&subset=latin-ext');
+
+/* GLOBAL STYLES */
 * {
 	box-sizing: border-box;
 }
@@ -5,11 +8,561 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: black;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a:focus, a:active {
+	outline: 0;
+	text-decoration: none;
 	color: #fff;
 }
 
-.testing {
+a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+button:focus, button:active {
+	outline: none;
+}
+
+[class*=col-] {
+	position: static;
+}
+
+/* HEADER */
+header {
+	min-height: 100vh;
+	background: url("https://static.pexels.com/photos/4167/sailing-ship-boat-sailing-lake.jpg") 0/cover no-repeat;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+}
+
+header > nav {
+	margin: 0 auto;
+}
+
+.logo {
+	height: 33px;
+	margin-top: 38px;
+	float: left;
+	cursor: pointer;
+}
+
+header > nav ul {
+	margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+
+header > nav ul > li {
+    float: left;
+    padding: 0;
+    height: 43px;
+    margin: 29px auto;
+    font-size: 16px;
+}
+
+header > nav ul > li:last-of-type {
+	margin-left: 10px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	background-position: 100% 0;
+    background-size: 300%;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+    background-image: linear-gradient(90deg, #fff 50%, transparent 50%);
+}
+
+header > nav ul > li > a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    color: #fff;
+    position: relative;
+}
+
+header > nav ul > li:after {
+    content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width 1.5s ease, background-color 1.5s ease;
+}
+
+header > nav ul > li:last-of-type:after {
+	display: none;
+}
+ 
+header > nav ul > li:hover:after {
+    width: 80%;
+    background: #fff;
+}
+
+header > nav ul > li:last-of-type:hover {
+	background-position: 0 100%;
+}
+
+header > nav ul > li:last-of-type:hover a {
+	color: #e7434e;
+}
+
+.hero .slogan, #have .slogan {
+	margin: 180px auto 80px auto;
+	color: #fff;
+	text-align: center;
+}
+
+.hero .slogan h1, #have .slogan h1 {
+	font-size: 72px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+}
+
+.hero .slogan h2, #have .slogan h2 {
+	font-size: 30px;
+	margin-top: 10px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header .form-group {
+	display: inline-block;
+}
+
+header .search {
+	width: 500px;
+	height: 60px;
+	font-size: 14px;
+	border-radius: 5px 0 0 5px;
+}
+
+header .btn {
+	background-color: #e7434e;
+	border: none;
+	height: 60px;
+	width: 200px;
+	border-radius: 0 5px 5px 0;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	margin-left: -4px;
+}
+
+header .btn:hover {
+	background-color: #f8545f;
+	color: #fff;
+}
+
+/* SECTION NUMBERS */
+.numbers ul {
+	margin: 0 auto;
+	margin-top: -60px;
+    padding: 15px 0;
+    list-style-type: none;
+    width: 800px;
+    height: 120px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 0 30px 0 #ccc;
+}
+
+.numbers ul > li {
+    display: inline-block;
+    width: 200px;
+    height: 90px;
+    margin-left: -4px;
+    padding: 5px 0 15px 0;
+	border-right: 1px solid #717171;
+}
+
+.numbers ul > li:last-of-type {
+	border: none;
+}
+
+.numbers ul > li .number {
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+.numbers ul > li .description {
+	font-size: 18px;
+	font-weight: 400;
+	color: #717171;
+}
+
+/* SECTION EXPLORE */
+#explore {
+	margin-top: 100px;
+	text-align: center;
+}
+
+#explore h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+}
+
+#explore .col-xs-12 p {
+	font-size: 16px;
+	color: #717171;
+	width: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+#explore [class*="col-"] {
+	padding-bottom: 30px;
+}
+
+#explore [class*="photo"] {
+	border-radius: 5px;
+	height: 300px;
+	position: relative;
+}
+
+#explore .photo1 {
+	background: url("https://static.pexels.com/photos/73806/beach-background-sand-water-73806.jpeg") 0/cover no-repeat;
+}
+
+#explore .photo2 {
+	background: url("https://static.pexels.com/photos/27045/pexels-photo-27045.jpg") 0/cover no-repeat;
+}
+
+#explore .photo3 {
+	background: url("https://static.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg") right/cover no-repeat;
+}
+
+#explore .photo4 {
+	background: url("https://static.pexels.com/photos/281993/pexels-photo-281993.jpeg") 0/cover no-repeat;
+}
+
+#explore .photo5 {
+	background: url("https://static.pexels.com/photos/325191/pexels-photo-325191.jpeg") 0/cover no-repeat;
+}
+
+#explore .overlay {
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#explore .overlay .boat {
+	border-radius: 5px;
+	border: none;
+	background-color: #e7434e;
+	width: 80px;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	transition: 1s;
+}
+
+#explore .overlay .boat:hover {
+	background-color: #f8545f;
+	transform: scale(1.1);
+}
+
+#explore .overlay:hover {
+	background-color: rgba(255,255,255,0.5);
+}
+
+#explore .overlay h3, #explore .overlay p {
+	color: #fff;
+	text-align: left;
+	padding-left: 10px;
+	margin: 0;
+}
+
+#explore .overlay h3 {
+	margin-top: 240px;
+}
+
+#explore .more, #have .slogan .more {
+	margin: 100px auto;
 	width: 300px;
-	margin: 50px auto;
+	height: 60px;
+	border-radius: 5px;
+	border: 1px solid #717171;
+	background-color: transparent;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	background-position: 100% 0;
+    background-size: 300%;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+    background-image: linear-gradient(90deg, #717171 50%, transparent 50%);
+}
+
+#explore .more:hover {
+	background-position: 0 100%;
+	color: #fff;
+}
+
+/* SECTION HAVE */
+#have {
+	height: 600px;
+	background: url("https://static.pexels.com/photos/32290/pexels-photo.jpg") 0/cover no-repeat;
+}
+
+#have .slogan .more {
+	background-color: #e7434e;
+	border: none;
+}
+
+#have .slogan .more:hover {
+	background-color: #f8545f;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* SECTION TABLE-INFO */
+#table-info {
+	min-height: 250px;
+}
+
+/* FOOTER */
+footer {
+	height: 320px;
+	background-color: #404040;
+	margin-top: 150px;
+	color: #fff;
+}
+
+footer .division {
+	height: 6px;
+    background: -webkit-repeating-linear-gradient(135deg, #e7434e 0%, black 1%);
+    background: -o-repeating-linear-gradient(135deg, #e7434e 0%, black 1%);
+    background: -moz-repeating-linear-gradient(135deg, #e7434e 0%, black 1%);
+    background: repeating-linear-gradient(135deg, #e7434e 0%, black 1%);
+}
+
+footer h3 {
+	margin: 50px 0 30px 0;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: 700; 
+}
+
+footer p {
+	font-size: 14px;
+	line-height: 34px;
+}
+
+footer .form-group {
+	width: 250px;
+	height: 42px;
+	float: left;
+}
+
+footer .form-control {
+	width: 250px;
+	height: 42px;
+	border-radius: 5px 0 0 5px;
+}
+
+footer .btn {
+	width: 140px;
+	height: 42px;
+	border-radius: 0 5px 5px 0;
+	display: inline-block;
+	background-color: #e7434e;
+	border: none;
+	font-size: 14px;
+	color: #fff;
+}
+
+footer .btn:hover {
+	background-color: #f8545f;
+	color: #fff;
+}
+
+footer .socials {
+	margin-top: 35px;
+}
+
+footer .facebook, footer .twitter, footer .gplus{
+	display: inline-block;
+	text-align: center;
+	height: 44px;
+	width: 44px;
+	margin: 0 5px;
+	font-size: 25px;
+	border-radius: 50%;
+	background-color: #717171;
+	line-height: 44px;
+	cursor: pointer;
+}
+
+footer .socials a {
+	color: #fff;
+}
+
+footer .facebook:hover a, footer .twitter:hover a, footer .gplus:hover a {
+	color: #f8545f;
+}
+
+/* RWD */
+@media (min-width: 1200px) {
+	#explore .container {
+		width: 1000px;
+	}
+
+	footer .col-md-2 {
+		width: 20%;
+	}
+
+	footer .col-md-4 {
+		width: 40%;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	#explore [class*=col-] {
+		padding: 10px;
+	}
+
+	footer p {
+		line-height: 16px;
+	}
+
+	footer .form-group, footer .form-control {
+		width: 225px;
+	}
+
+	footer .btn {
+		width: 100px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.hero .slogan h1, #have .slogan h1 {
+		font-size: 60px;
+	}
+
+	.numbers ul {
+		width: 650px;
+	}
+
+	.numbers ul > li {
+		width: 163px;
+	}
+
+	#explore .col-xs-12 p {
+		width: 100%;
+	}
+
+	footer {
+		height: auto;
+	}
+
+	footer p {
+		line-height: 16px;
+	}
+}
+
+@media (max-width: 767px) {
+	header {
+		background: url("https://static.pexels.com/photos/4167/sailing-ship-boat-sailing-lake.jpg") center/cover no-repeat;
+	}
+
+	header > nav .logo {
+		float: none;
+		text-align: center;
+	}
+
+	header > nav ul {
+		float: none;
+	}
+
+	header > nav ul > li {
+		float: none;
+		display: block;
+		text-align: center;
+		width: 200px;
+	}
+
+	header > nav ul > li:last-of-type {
+		margin: 0 auto;
+	}
+
+	.hero .slogan {
+		margin: 50px auto;
+	}
+
+	.hero .slogan h1, #have .slogan h1 {
+		font-size: 45px;
+	}
+
+	.hero .slogan h2, #have .slogan h2 {
+		font-size: 20px;
+	}
+
+	header .search {
+		width: 200px;
+	}
+
+	header .btn {
+		width: 150px;
+	}
+
+	.numbers ul {
+		width: 300px;
+	}
+
+	.numbers ul > li {
+		width: 75px;
+		padding: 20px 0;
+	}
+
+	.numbers ul > li .number {
+		font-size: 18px;
+	} 
+
+	.numbers ul > li .description {
+		font-size: 12px;
+	}
+
+	#explore h2 {
+		font-size: 20px;
+	}
+
+	#explore .col-xs-12 p {
+		font-size: 12px;
+		width: auto;
+	}
+
+	#have .slogan {
+		margin-top: 230px;
+	}
+
+	footer {
+		height: auto;
+	}
+
+	footer .form-control, footer .form-group {
+		width: 200px;
+	}
+
+	footer .btn {
+		width: 150px;
+	}
+
+	footer .socials {
+		margin: 35px 0;
+	}
 }
