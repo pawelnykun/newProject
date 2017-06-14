@@ -341,6 +341,22 @@ header .btn:hover {
 	text-align: center;
 }
 
+#table-info .table-responsive table thead tr {
+	background-color: #f8545f;
+	color: #fff;
+}
+
+#table-info .table-responsive table thead tr th p {
+	font-size: 14px;
+	margin: 0;
+	cursor: pointer;
+	display: none;
+}
+
+#table-info .table-responsive table thead tr th:hover p {
+	display: inline-block;
+}
+
 /* FOOTER */
 footer {
 	height: 320px;

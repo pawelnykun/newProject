@@ -43,6 +43,20 @@ $(function() {
 	testingConnection();
 	getData();
 
+	//sorting
+	function sortColumn() {
+		
+	}
+
+	var arrow = $('.sort');
+	arrow.click(function() {
+		$.ajax({
+			url: url + connect,
+			method: 'POST',
+			success: sortColumn
+		});
+	});
+
 	//scrollTo#
 	$('a').click(function() {
 		var href = $(this).attr("href");
