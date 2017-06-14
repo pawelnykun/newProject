@@ -318,6 +318,7 @@ header .btn:hover {
 #have {
 	height: 600px;
 	background: url("https://static.pexels.com/photos/32290/pexels-photo.jpg") 0/cover no-repeat;
+	margin-bottom: 100px;
 }
 
 #have .slogan .more {
@@ -331,8 +332,13 @@ header .btn:hover {
 }
 
 /* SECTION TABLE-INFO */
-#table-info {
-	min-height: 250px;
+#table-info .table-responsive {
+	margin: 50px auto;
+	width: 80%;
+}
+
+#table-info h2, #table-info p {
+	text-align: center;
 }
 
 /* FOOTER */
