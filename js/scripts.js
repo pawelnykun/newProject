@@ -3,6 +3,9 @@ $(function() {
 	var test = 'ping';
 	var connect = 'get-data';
 	var table = $('.table-responsive');
+	var prev = $('.js-prev');
+	var next = $('.js-next');
+	var currentPageNumber = 1;
 	
 	function testingConnection() {
 		$.ajax({
@@ -16,11 +19,15 @@ $(function() {
 		console.log("Response is: " + resp.response);
 	}
 
-	function getData(data) {
+	function getData(data, page) {
+		page = page || 1;
 		$.ajax({
 			url: url + connect,
 			method: 'POST',
-			data: data,
+			data: $.extend(data, {
+				page_size: 20,
+				page: page
+			}),
 			success: showData
 		});
 	}
@@ -42,7 +49,7 @@ $(function() {
 		})
 	}
 
-	testingConnection();
+	testingConnection(); //testing connection:)
 
 	var data = {
 		sort_column: 'acronym',
@@ -50,12 +57,30 @@ $(function() {
 		filter: ''
 	};
 
-	getData(data);
+	getData(data, currentPageNumber); //first getting data
 
-	//sorting
-	function sortColumn() {
-		
+	//pagening
+	function checkCurrentPageNumber() {
+		console.log('Current page number is: ' + currentPageNumber);
+		if (currentPageNumber > 1) prev.show();
+		else prev.hide();
 	}
+
+	checkCurrentPageNumber(); //first checking page number
+
+	prev.click(function() {
+		currentPageNumber--;
+		console.log(currentPageNumber);
+		checkCurrentPageNumber();
+		getData(data, currentPageNumber);
+	});
+
+	next.click(function() {
+		currentPageNumber++;
+		console.log(currentPageNumber);
+		checkCurrentPageNumber();
+		getData(data, currentPageNumber);
+	});
 
 	$('.firstID').find('.fa-sort-desc').click(function() {
 		data = {
@@ -63,7 +88,11 @@ $(function() {
 			sort_order: 'desc',
 			filter: ''
 		};
+		console.log('Current page number before getting data: ' + currentPageNumber);
 		getData(data);
+		currentPageNumber = 1; //resetting page number
+		console.log('Current page number after getting data: ' + currentPageNumber);
+		checkCurrentPageNumber();
 	});
 
 	//scrollTo#

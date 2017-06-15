@@ -33,7 +33,7 @@ button:focus, button:active {
 /* HEADER */
 header {
 	min-height: 100vh;
-	background: url("https://static.pexels.com/photos/4167/sailing-ship-boat-sailing-lake.jpg") 0/cover no-repeat;
+	background: url("../img/sailing-ship-boat-sailing-lake.jpg") 0/cover no-repeat;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 }
@@ -229,23 +229,23 @@ header .btn:hover {
 }
 
 #explore .photo1 {
-	background: url("https://static.pexels.com/photos/73806/beach-background-sand-water-73806.jpeg") 0/cover no-repeat;
+	background: url("../img/beach-background-sand-water-73806.jpeg") 0/cover no-repeat;
 }
 
 #explore .photo2 {
-	background: url("https://static.pexels.com/photos/27045/pexels-photo-27045.jpg") 0/cover no-repeat;
+	background: url("../img/pexels-photo-27045.jpg") 0/cover no-repeat;
 }
 
 #explore .photo3 {
-	background: url("https://static.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg") right/cover no-repeat;
+	background: url("../img/santorini-oia-greece-water-161815.jpeg") right/cover no-repeat;
 }
 
 #explore .photo4 {
-	background: url("https://static.pexels.com/photos/281993/pexels-photo-281993.jpeg") 0/cover no-repeat;
+	background: url("../img/pexels-photo-281993.jpeg") 0/cover no-repeat;
 }
 
 #explore .photo5 {
-	background: url("https://static.pexels.com/photos/325191/pexels-photo-325191.jpeg") 0/cover no-repeat;
+	background: url("../img/pexels-photo-325191.jpeg") 0/cover no-repeat;
 }
 
 #explore .overlay {
@@ -317,7 +317,7 @@ header .btn:hover {
 /* SECTION HAVE */
 #have {
 	height: 600px;
-	background: url("https://static.pexels.com/photos/32290/pexels-photo.jpg") 0/cover no-repeat;
+	background: url("../img/pexels-photo.jpg") 0/cover no-repeat;
 	margin-bottom: 100px;
 }
 
