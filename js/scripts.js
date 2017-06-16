@@ -19,9 +19,11 @@ $(function() {
 		console.log("Response is: " + resp.response);
 	}
 
+	testingConnection(); //testing connection:)
+
 	function getData(data, page, size) {
 		page = page || 1;
-		size = size || 20
+		size = size || 10;
 		$.ajax({
 			url: url + connect,
 			method: 'POST',
@@ -50,11 +52,9 @@ $(function() {
 		})
 	}
 
-	testingConnection(); //testing connection:)
-
 	var data = {
-		sort_column: 'acronym',
-		sort_order: 'asc',
+		sort_column: '',
+		sort_order: '',
 		filter: ''
 	};
 
@@ -83,13 +83,59 @@ $(function() {
 		getData(data, currentPageNumber);
 	});
 
-	//sortting
-	$('.firstID').find('.fa-sort-desc').click(function() {
-		data = {
-			sort_column: 'id',
-			sort_order: 'desc',
-			filter: ''
-		};
+	//sortting descending
+	$('.fa-sort-desc').click(function() {
+		if ( $(this).hasClass('first')) {
+			data = {
+				sort_column: 'id',
+				sort_order: 'desc',
+				filter: ''
+			};
+		} else
+		if ( $(this).hasClass('second')) {
+			data = {
+				sort_column: 'acronym',
+				sort_order: 'desc',
+				filter: ''
+			};
+		} else
+		if ( $(this).hasClass('third')) {
+			data = {
+				sort_column: 'name',
+				sort_order: 'desc',
+				filter: ''
+			};
+		}
+		console.log('Current page number before getting data: ' + currentPageNumber);
+		getData(data);
+		currentPageNumber = 1; //resetting page number
+		console.log('Current page number after getting data: ' + currentPageNumber);
+		checkCurrentPageNumber();
+	});
+
+	//sortting ascending
+	$('.fa-sort-asc').click(function() {
+		if ( $(this).hasClass('first')) {
+			data = {
+				sort_column: 'id',
+				sort_order: 'asc',
+				filter: ''
+			};
+		} else
+		if ( $(this).hasClass('second')) {
+			data = {
+				sort_column: 'acronym',
+				sort_order: 'asc',
+				filter: ''
+			};
+		} else
+		if ( $(this).hasClass('third')) {
+			data = {
+				sort_column: 'name',
+				sort_order: 'asc',
+				filter: ''
+			};
+		}
 		console.log('Current page number before getting data: ' + currentPageNumber);
 		getData(data);
 		currentPageNumber = 1; //resetting page number

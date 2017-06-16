@@ -369,6 +369,10 @@ i.fa-sort-desc {
 	display: inline-block;
 }
 
+#page_size {
+	float: right;
+}
+
 /* FOOTER */
 footer {
 	height: 320px;
