@@ -19,13 +19,14 @@ $(function() {
 		console.log("Response is: " + resp.response);
 	}
 
-	function getData(data, page) {
+	function getData(data, page, size) {
 		page = page || 1;
+		size = size || 20
 		$.ajax({
 			url: url + connect,
 			method: 'POST',
 			data: $.extend(data, {
-				page_size: 20,
+				page_size: size,
 				page: page
 			}),
 			success: showData
@@ -82,6 +83,7 @@ $(function() {
 		getData(data, currentPageNumber);
 	});
 
+	//sortting
 	$('.firstID').find('.fa-sort-desc').click(function() {
 		data = {
 			sort_column: 'id',
