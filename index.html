@@ -157,23 +157,22 @@
 				<table class="table table-bordered table-hover">
 					<thead>
 						<tr>
-							<th>ID<p class="sort"><i class="fa fa-sort-desc first" aria-hidden="true"></i><i class="fa fa-sort-asc first" aria-hidden="true"></i></p></th>
-							<th>ACRONYM<p class="sort"><i class="fa fa-sort-desc second" aria-hidden="true"></i><i class="fa fa-sort-asc second" aria-hidden="true"></i></p></th>
-							<th>NAME<p class="sort"><i class="fa fa-sort-desc third" aria-hidden="true"></i><i class="fa fa-sort-asc third" aria-hidden="true"></i></p></th>
+							<th>ID<p class="sort"><i class="fa fa-sort-desc" data-order="desc" data-column="id" aria-hidden="true"></i><i class="fa fa-sort-asc" data-order="asc" data-column="id" aria-hidden="true"></i></p></th>
+							<th>ACRONYM<p class="sort"><i class="fa fa-sort-desc" data-order="desc" data-column="acronym" aria-hidden="true"></i><i class="fa fa-sort-asc" data-order="asc" data-column="acronym" aria-hidden="true"></i></p></th>
+							<th>NAME<p class="sort"><i class="fa fa-sort-desc" data-order="desc" data-column="name" aria-hidden="true"></i><i class="fa fa-sort-asc" data-order="asc" data-column="name" aria-hidden="true"></i></p></th>
 						</tr>
 					</thead>
 					<tbody>
 					</tbody>
 				</table>
 				<button class="js-prev"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+				<span class="page-number">1</span>
 				<button class="js-next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-				<form id="page_size">
-					<select name="page_size">
-						<option value="10">10</option>
-						<option value="15">15</option>
-						<option value="20">20</option>
-					</select>
-				</form>
+				<select class="page-size">
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+				</select>
 			</div>
 		</section><!-- Section Table-Info Ends -->
 		<!-- Footer Starts -->

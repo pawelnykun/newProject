@@ -6,6 +6,7 @@ $(function() {
 	var prev = $('.js-prev');
 	var next = $('.js-next');
 	var currentPageNumber = 1;
+	var size = $('.page-size').val();
 	
 	function testingConnection() {
 		$.ajax({
@@ -49,7 +50,7 @@ $(function() {
 				.append($itemName);
 
 			$row.appendTo(tbody);
-		})
+		});
 	}
 
 	var data = {
@@ -61,86 +62,69 @@ $(function() {
 	getData(data, currentPageNumber); //first getting data
 
 	//pagening
+	function checkCurrentDisplaySize() {
+		size = $('.page-size').val();
+	}
+
 	function checkCurrentPageNumber() {
-		console.log('Current page number is: ' + currentPageNumber);
 		if (currentPageNumber > 1) prev.show();
 		else prev.hide();
 	}
 
 	checkCurrentPageNumber(); //first checking page number
 
+	function updatePageNumber() {
+		$('.page-number').html(currentPageNumber);
+	}
+
 	prev.click(function() {
 		currentPageNumber--;
 		console.log(currentPageNumber);
 		checkCurrentPageNumber();
-		getData(data, currentPageNumber);
+		checkCurrentDisplaySize(); //checking size
+		getData(data, currentPageNumber, size);
+		updatePageNumber();
 	});
 
 	next.click(function() {
 		currentPageNumber++;
 		console.log(currentPageNumber);
 		checkCurrentPageNumber();
-		getData(data, currentPageNumber);
+		checkCurrentDisplaySize(); //checking size
+		getData(data, currentPageNumber, size);
+		updatePageNumber();
 	});
 
-	//sortting descending
+	//sorting descending
 	$('.fa-sort-desc').click(function() {
-		if ( $(this).hasClass('first')) {
-			data = {
-				sort_column: 'id',
-				sort_order: 'desc',
-				filter: ''
-			};
-		} else
-		if ( $(this).hasClass('second')) {
-			data = {
-				sort_column: 'acronym',
-				sort_order: 'desc',
-				filter: ''
-			};
-		} else
-		if ( $(this).hasClass('third')) {
-			data = {
-				sort_column: 'name',
-				sort_order: 'desc',
-				filter: ''
-			};
-		}
+		data = {
+			sort_column: $(this).data('column'),
+			sort_order: $(this).data('order'),
+			filter: ''
+		};
 		console.log('Current page number before getting data: ' + currentPageNumber);
-		getData(data);
 		currentPageNumber = 1; //resetting page number
+		checkCurrentDisplaySize(); //checking size
+		getData(data, checkCurrentPageNumber, size);
 		console.log('Current page number after getting data: ' + currentPageNumber);
 		checkCurrentPageNumber();
+		updatePageNumber();
 	});
 
-	//sortting ascending
+	//sorting ascending
 	$('.fa-sort-asc').click(function() {
-		if ( $(this).hasClass('first')) {
-			data = {
-				sort_column: 'id',
-				sort_order: 'asc',
-				filter: ''
-			};
-		} else
-		if ( $(this).hasClass('second')) {
-			data = {
-				sort_column: 'acronym',
-				sort_order: 'asc',
-				filter: ''
-			};
-		} else
-		if ( $(this).hasClass('third')) {
-			data = {
-				sort_column: 'name',
-				sort_order: 'asc',
-				filter: ''
-			};
-		}
+		data = {
+			sort_column: $(this).data('column'),
+			sort_order: $(this).data('order'),
+			filter: ''
+		};
 		console.log('Current page number before getting data: ' + currentPageNumber);
-		getData(data);
 		currentPageNumber = 1; //resetting page number
+		checkCurrentDisplaySize(); //checking size
+		getData(data, checkCurrentPageNumber, size);
 		console.log('Current page number after getting data: ' + currentPageNumber);
 		checkCurrentPageNumber();
+		updatePageNumber();
 	});
 
 	//scrollTo#

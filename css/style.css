@@ -9,6 +9,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
+	min-width: 320px;
 }
 
 a:focus, a:active {
@@ -369,7 +370,7 @@ i.fa-sort-desc {
 	display: inline-block;
 }
 
-#page_size {
+.page-size {
 	float: right;
 }
 
@@ -478,8 +479,12 @@ footer .facebook:hover a, footer .twitter:hover a, footer .gplus:hover a {
 		line-height: 16px;
 	}
 
+	footer form {
+		width: 290px;
+	}
+
 	footer .form-group, footer .form-control {
-		width: 225px;
+		width: 190px;
 	}
 
 	footer .btn {
@@ -543,27 +548,33 @@ footer .facebook:hover a, footer .twitter:hover a, footer .gplus:hover a {
 	}
 
 	.hero .slogan h1, #have .slogan h1 {
-		font-size: 45px;
+		font-size: 40px;
 	}
 
 	.hero .slogan h2, #have .slogan h2 {
 		font-size: 20px;
 	}
 
+	header form {
+		margin: auto auto 60px;
+    	width: 290px;
+	}
+
 	header .search {
-		width: 200px;
+		width: 180px;
 	}
 
 	header .btn {
-		width: 150px;
+		width: 100px;
+		font-size: 10px;
 	}
 
 	.numbers ul {
-		width: 300px;
+		width: 290px;
 	}
 
 	.numbers ul > li {
-		width: 75px;
+		width: 70px;
 		padding: 20px 0;
 	}
 
@@ -572,7 +583,7 @@ footer .facebook:hover a, footer .twitter:hover a, footer .gplus:hover a {
 	} 
 
 	.numbers ul > li .description {
-		font-size: 12px;
+		font-size: 11px;
 	}
 
 	#explore h2 {
@@ -584,20 +595,30 @@ footer .facebook:hover a, footer .twitter:hover a, footer .gplus:hover a {
 		width: auto;
 	}
 
+	#explore .more, #have .slogan .more {
+		width: 290px;
+	}
+
 	#have .slogan {
 		margin-top: 230px;
 	}
 
 	footer {
 		height: auto;
+		text-align: center;
+	}
+
+	footer form {
+		width: 280px;
+		margin: auto;
 	}
 
 	footer .form-control, footer .form-group {
-		width: 200px;
+		width: 180px;
 	}
 
 	footer .btn {
-		width: 150px;
+		width: 100px;
 	}
 
 	footer .socials {
