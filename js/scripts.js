@@ -95,6 +95,12 @@ $(function() {
 		updatePageNumber();
 	});
 
+	//getting data after change the select option
+	$(".page-size").change(function() {
+	    size = $(this).val();
+	    getData(data, currentPageNumber, size);
+	});
+
 	//sorting descending
 	$('.fa-sort-desc').click(function() {
 		data = {
@@ -125,6 +131,11 @@ $(function() {
 		console.log('Current page number after getting data: ' + currentPageNumber);
 		checkCurrentPageNumber();
 		updatePageNumber();
+	});
+
+	//filter
+	$('.fa-filter').click(function() {
+		$(this).closest($('.data-filter')).show();
 	});
 
 	//scrollTo#

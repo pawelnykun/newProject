@@ -131,6 +131,10 @@ header > nav ul > li:last-of-type:hover a {
 	margin-top: 10px;
 	font-family: 'Open Sans', sans-serif;
 }
+	
+header form {
+	margin-bottom: 50px;
+}
 
 header .form-group {
 	display: inline-block;
@@ -368,6 +372,27 @@ i.fa-sort-desc {
 
 #table-info .table-responsive table thead tr th:hover p {
 	display: inline-block;
+}
+
+#table-info .table-responsive table thead tr th .fa-filter {
+	margin: 0 10px;
+}
+
+#table-info .table-responsive table thead tr th .fa-filter:hover {
+	cursor: pointer;
+	color: black;
+}
+
+#table-info .table-responsive table thead tr th .data-filter {
+	float: right;
+	height: 20px;
+	width: 200px;
+	color: black;
+	padding: 2px 4px;
+	display: none;
+}
+
+#table-info .table-responsive table thead tr th .data-filter:focus {
 }
 
 .page-size {
