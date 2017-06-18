@@ -134,9 +134,21 @@ $(function() {
 	});
 
 	//filter
+	$('.fa-filter').hide();
+	/*
 	$('.fa-filter').click(function() {
 		$(this).closest($('.data-filter')).show();
 	});
+
+	$('.data-filter').keypress(function(e) {
+		switch (e.keyCode) {
+        	case 13:
+        		data.sort_column = $(this).data('column');
+        		data.filter = $(this).val();
+            	getData(data);
+            	break;
+        }
+	});*/
 
 	//scrollTo#
 	$('a').click(function() {
